@@ -1,8 +1,8 @@
 //
 
 import express from "express";
-import { Item } from '../models/item';
-import { sendError } from '../utils/errorHandler';
+import type { Item } from '../models/item.js';
+import { sendError } from '../utils/errorHandler.js';
 
 const router = express.Router();
 let items: Item[] = [];

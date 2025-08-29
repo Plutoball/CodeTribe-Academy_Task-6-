@@ -5,9 +5,11 @@
     "outDir": "./dist",
 
     // Environment Settings
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "target": "es6",
     "types": [],
+
 
     // For nodejs:
     // "lib": ["esnext"],
@@ -39,6 +41,7 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
   }
 }
