@@ -1,7 +1,7 @@
 //
 
 import express from "express";
-import itemsRouter from "./routes/items";
+import itemsRouter from "./routes/items.js";
 
 const app = express();
 const PORT = 3000;
