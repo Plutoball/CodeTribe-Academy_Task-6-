@@ -1,4 +1,4 @@
-//
+//To keep API responses consistent and predictable.
 
 import type { Response } from  "express";
 

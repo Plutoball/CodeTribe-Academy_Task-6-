@@ -1,4 +1,4 @@
-//
+//CRUD Operations with routing.
 
 import express from "express";
 import type { Item } from '../models/item.js';
@@ -8,6 +8,7 @@ const router = express.Router();
 let items: Item[] = [];
 let nextId = 1;
 
+//Read (Get/items, GET/items/:id) - Retrieve one or all items.
 //GET all items
 router.get("/", (req, res) => {
     res.json(items);
@@ -21,6 +22,7 @@ router.get("/:id", (req, res) =>{
     res.json(item);
 });
 
+//Create (POST/items) - Add new item.
 //POST new item
 router.post("/", (req, res) => {
     const { name, quantity, purchased } = req.body;
@@ -32,6 +34,7 @@ router.post("/", (req, res) => {
     res.status(201).json(newItem);
 });
 
+//Update (PUT/ items/:id) - Modify item name, quantity and purchased status.
 //PUT update item
 router.put("/:id", (req, res) => {
     const id =  parseInt(req.params.id);
@@ -49,6 +52,7 @@ router.put("/:id", (req, res) => {
     res.json(item);
 });
 
+//Delete (DELETE/items/:id) - remove an item
 //DELETE item
 router.delete("/:id", (req,res) =>{
     const id = parseInt(req.params.id);
