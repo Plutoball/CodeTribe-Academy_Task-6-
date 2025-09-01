@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "Shopping List API",
+    "_postman_id": "b1234567-89ab-cdef-0123-456789abcdef",
+    "description": "Postman collection for Shopping List API (Node.js + TypeScript)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Items",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Get Item by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    },
+    {
+      "name": "Add Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Milk\",\n    \"quantity\": 2,\n    \"purchased\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Update Item",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Milk\",\n    \"quantity\": 3,\n    \"purchased\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Item",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    }
+  ]
+}
