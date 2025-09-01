@@ -1,18 +1,11 @@
-//Acts as brain of the application/API---
-
+//
 import express from "express";
 import itemsRouter from "./routes/items.js";
-
 const app = express();
 const PORT = 3000;
-
 app.use(express.json());
 app.use("/items", itemsRouter);
-
-app.get("/", (req, res) => {
-    res.send("Welcome to the Shopping List API");
-});
-
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+//# sourceMappingURL=server.js.map
